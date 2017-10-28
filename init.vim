@@ -56,12 +56,12 @@ set encoding=UTF-8
 " {{{1 mappings
 " {{{2 config file
 " source config file
-nnoremap <LEADER>s :so ~/.config/nvim/init.vim<CR>
+nnoremap <Leader>s :so ~/.config/nvim/init.vim<CR>
 " edit config file
-nnoremap <LEADER>e :e ~/.config/nvim/init.vim<CR>
+nnoremap <Leader>e :e ~/.config/nvim/init.vim<CR>
 " {{{2 help
 " jump to help tag
-nnoremap <LEADER>h <C-]>
+nnoremap <Leader>h <C-]>
 " {{{2 moving by visual lines
 nnoremap j gj
 nnoremap k gk
@@ -80,7 +80,7 @@ nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 " {{{2 search
 " remove highlight
-nnoremap <LEADER><SPACE> :nohl<CR>
+nnoremap <Leader><SPACE> :nohl<CR>
 vnoremap / "vyq/"vp<CR>
 vnoremap ? "vyq?"vp<CR>
 " {{{2 completion
