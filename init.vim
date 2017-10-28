@@ -43,6 +43,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'chrisbra/NrrwRgn'
   Plug 'vim-scripts/dbext.vim'
   Plug 'swekaj/php-foldexpr.vim'
+  Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " {{{1 leader
