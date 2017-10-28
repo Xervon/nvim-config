@@ -18,7 +18,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'joonty/vim-sauce'
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer --rust-completer' }
   Plug 'mtth/scratch.vim'
   Plug 'jsfaint/gen_tags.vim'
   Plug 'vim-airline/vim-airline'
@@ -242,6 +242,9 @@ let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_list_select_completion = ['<Down>', '<C-n>']
 let g:ycm_key_list_previous_completion = ['<Up>',   '<C-p>']
+let g:ycm_rust_src_path = '~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
+" {{{3 mappings
+nnoremap <Leader>ygd :YcmCompleter GoTo<CR>
 " {{{2 scratch.vim
 let g:scratch_persistence_file = '.scratch.vim'
 " {{{2 gen_tags
