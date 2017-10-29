@@ -7,12 +7,12 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'nazo/pt.vim'
   Plug 'chaoren/vim-wordmotion'
   Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'pangloss/vim-javascript'
-  Plug 'mxw/vim-jsx'
-  Plug 'elzr/vim-json'
+  Plug 'pangloss/vim-javascript', { 'for': [ 'html', 'javascript' ] }
+  Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+  Plug 'elzr/vim-json', { 'for': 'json' }
   Plug 'mattn/emmet-vim'
   Plug 'w0rp/ale'
-  Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+  Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': [ 'html', 'javascript' ] }
   Plug 'shawncplus/phpcomplete.vim'
   Plug 'Shougo/vimproc.vim'
   Plug 'joonty/vim-sauce'
@@ -43,7 +43,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'chrisbra/NrrwRgn'
   Plug 'vim-scripts/dbext.vim'
   Plug 'swekaj/php-foldexpr.vim'
-  Plug 'rust-lang/rust.vim'
+  Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 call plug#end()
 
 " {{{1 leader
