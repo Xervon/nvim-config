@@ -260,7 +260,7 @@ let g:airline_powerline_fonts = 1
 "let g:tmuxline_preset = 'airline'
 " {{{2 vim-js-context-coloring
 let g:js_context_colors_jsx = 1
-" {{{2 vim-plug
+" {{{2 vim-easy-align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 " {{{2 pt
