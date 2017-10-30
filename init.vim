@@ -202,6 +202,10 @@ if executable('pt')
   let g:ctrlp_user_command = 'pt %s -l --nocolor -g ""'
   com! CPI let g:ctrlp_user_command = 'pt %s -l --nocolor -g ""' | CtrlPClearCache
   com! CPA let g:ctrlp_user_command = 'pt %s -l --nocolor -g "" -U' | CtrlPClearCache
+elseif executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  com! CPI let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""' | CtrlPClearCache
+  com! CPA let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" -U' | CtrlPClearCache
 endif
 " {{{2 vim-jsx
 let g:jsx_ext_required = 0
@@ -259,6 +263,12 @@ let g:js_context_colors_jsx = 1
 " {{{2 vim-plug
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+" {{{2 pt
+if executable('pt')
+  let g:ptprg="pt"
+elseif executable('ag')
+  let g:ptprg="ag"
+endif
 "}}}1
 
 " vim: fdm=marker foldlevel=0 tabstop=4:
