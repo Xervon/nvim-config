@@ -38,6 +38,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tpope/vim-abolish'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-speeddating'
+  Plug 'tpope/vim-markdown'
+  Plug 'suan/vim-instant-markdown'
   Plug 'scrooloose/nerdcommenter'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
   Plug 'chrisbra/NrrwRgn'
@@ -273,6 +275,8 @@ if executable('pt')
 elseif executable('ag')
   let g:ptprg="ag"
 endif
+" {{{2 vim-markdown
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'js=javascript', 'php']
 "}}}1
 
 " vim: fdm=marker foldlevel=0 tabstop=4:
