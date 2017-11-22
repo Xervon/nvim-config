@@ -65,6 +65,8 @@ nnoremap <Leader>h <C-]>
 " {{{2 moving by visual lines
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 " {{{2 folding
 " toggle fold
 nnoremap <SPACE> za
@@ -138,6 +140,8 @@ set foldlevelstart=999
 " {{{1 search
 set hlsearch
 set incsearch
+set ignorecase
+set smartcase
 
 " {{{1 arbitrary settings
 set scrolloff=10
