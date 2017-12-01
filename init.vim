@@ -1,52 +1,5 @@
 
-" {{{1 plugins
-call plug#begin('~/.config/nvim/plugged')
-  Plug 'altercation/vim-colors-solarized'
-  Plug 'MarcWeber/vim-addon-local-vimrc'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'nazo/pt.vim'
-  Plug 'chaoren/vim-wordmotion'
-  Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'pangloss/vim-javascript', { 'for': [ 'html', 'javascript' ] }
-  Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-  Plug 'elzr/vim-json', { 'for': 'json' }
-  Plug 'mattn/emmet-vim'
-  Plug 'w0rp/ale'
-  Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': [ 'html', 'javascript' ] }
-  Plug 'shawncplus/phpcomplete.vim'
-  Plug 'Shougo/vimproc.vim'
-  Plug 'joonty/vim-sauce'
-  Plug 'SirVer/ultisnips'
-  Plug 'honza/vim-snippets'
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer --rust-completer' }
-  Plug 'mtth/scratch.vim'
-  Plug 'jsfaint/gen_tags.vim'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  Plug 'edkolev/tmuxline.vim'
-  Plug 'junegunn/vim-easy-align'
-  Plug 'jceb/vim-orgmode'
-  Plug 'majutsushi/tagbar'
-  Plug 'mattn/calendar-vim'
-  Plug 'vim-scripts/utl.vim'
-  Plug 'vim-scripts/SyntaxRange'
-  Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-projectionist'
-  Plug 'tpope/vim-sensible'
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-unimpaired'
-  Plug 'tpope/vim-abolish'
-  Plug 'tpope/vim-repeat'
-  Plug 'tpope/vim-speeddating'
-  Plug 'tpope/vim-markdown'
-  Plug 'suan/vim-instant-markdown'
-  Plug 'scrooloose/nerdcommenter'
-  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-  Plug 'chrisbra/NrrwRgn'
-  Plug 'vim-scripts/dbext.vim'
-  Plug 'swekaj/php-foldexpr.vim'
-  Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-call plug#end()
+execute pathogen#infect('~/.config/nvim/bundle')
 
 " {{{1 leader
 let mapleader=","
