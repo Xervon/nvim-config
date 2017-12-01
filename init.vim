@@ -1,5 +1,5 @@
 
-execute pathogen#infect('~/.config/nvim/bundle')
+execute pathogen#infect('~/.config/nvim/bundle/{}')
 
 " {{{1 leader
 let mapleader=","
