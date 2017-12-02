@@ -120,6 +120,9 @@ if executable('pt')
   set grepprg=pt\ --nogroup\ --nocolor
 endif
 
+" {{{1 fzf
+set rtp+=$HOME/.modules/fzf
+
 " {{{1 pastetoggle
 set pastetoggle=<F10>
 
