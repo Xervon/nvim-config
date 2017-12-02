@@ -115,10 +115,8 @@ au BufRead,BufNewFile *.html.twig set filetype=html.twig
 set completeopt=longest,menuone
 autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 
-" {{{1 the platinum searcher
-if executable('pt')
-  set grepprg=pt\ --nogroup\ --nocolor
-endif
+" {{{1 grepprg
+set grepprg=rg\ --vimgrep
 
 " {{{1 fzf
 set rtp+=$HOME/.modules/fzf
@@ -146,27 +144,6 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Clean"     : "✔︎",
     \ "Unknown"   : "?"
     \ }
-" {{{2 CtrlP
-" Set no max file limit
-let g:ctrlp_max_files = 0
-" Search from current directory instead of project root
-let g:ctrlp_working_path_mode = 0
-
-" Ignore these directories
-set wildignore+=*/out/**
-set wildignore+=*/vendor/**
-set wildignore+=*/node_modules/**
-
-if executable('pt')
-  " Use pt in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'pt %s -l --nocolor -g ""'
-  com! CPI let g:ctrlp_user_command = 'pt %s -l --nocolor -g ""' | CtrlPClearCache
-  com! CPA let g:ctrlp_user_command = 'pt %s -l --nocolor -g "" -U' | CtrlPClearCache
-elseif executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  com! CPI let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""' | CtrlPClearCache
-  com! CPA let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" -U' | CtrlPClearCache
-endif
 " {{{2 vim-jsx
 let g:jsx_ext_required = 0
 " {{{2 vim-javascript
@@ -231,6 +208,14 @@ elseif executable('ag')
 endif
 " {{{2 vim-markdown
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'js=javascript', 'php']
+" {{{2 fzf.vim
+nnoremap <C-p> :Files<CR>
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
 "}}}1
 
 " vim: fdm=marker foldlevel=0 tabstop=4:
