@@ -116,9 +116,7 @@ set completeopt=longest,menuone
 autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 
 " {{{1 the platinum searcher
-" The Silver Searcher
 if executable('pt')
-  " Use pt over grep
   set grepprg=pt\ --nogroup\ --nocolor
 endif
 
