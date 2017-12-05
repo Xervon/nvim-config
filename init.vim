@@ -48,7 +48,8 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 nnoremap <S-y> y$
 
 " {{{1 custom commands
-com! Q :suspend
+cabbrev q <c-r>=(winnr('$')==1 ? 'enew' : 'q')<CR>
+cabbrev wq <c-r>=(winnr('$')==1 ? 'w <BAR> enew' : 'wq')<CR>
 
 " {{{1 read and write gzip-files
 augroup gzip
