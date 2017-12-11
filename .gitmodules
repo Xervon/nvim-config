@@ -139,3 +139,9 @@
 [submodule "bundle/ncm-phpactor"]
 	path = bundle/ncm-phpactor
 	url = git@github.com:roxma/ncm-phpactor
+[submodule "bundle/nvim-cm-racer"]
+	path = bundle/nvim-cm-racer
+	url = git@github.com:roxma/nvim-cm-racer
+[submodule "bundle/vim-racer"]
+	path = bundle/vim-racer
+	url = git@github.com:racer-rust/vim-racer
