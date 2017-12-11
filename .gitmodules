@@ -10,9 +10,6 @@
 [submodule "bundle/nerdtree-git-plugin"]
 	path = bundle/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin
-[submodule "bundle/pt.vim"]
-	path = bundle/pt.vim
-	url = https://github.com/nazo/pt.vim
 [submodule "bundle/vim-wordmotion"]
 	path = bundle/vim-wordmotion
 	url = https://github.com/chaoren/vim-wordmotion
