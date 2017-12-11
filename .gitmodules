@@ -28,9 +28,6 @@
 [submodule "bundle/ale"]
 	path = bundle/ale
 	url = https://github.com/w0rp/ale
-[submodule "bundle/tern_for_vim"]
-	path = bundle/tern_for_vim
-	url = https://github.com/ternjs/tern_for_vim
 [submodule "bundle/phpcomplete.vim"]
 	path = bundle/phpcomplete.vim
 	url = https://github.com/shawncplus/phpcomplete.vim
@@ -133,3 +130,6 @@
 [submodule "bundle/nvim-completion-manager"]
 	path = bundle/nvim-completion-manager
 	url = git@github.com:roxma/nvim-completion-manager
+[submodule "bundle/nvim-cm-tern"]
+	path = bundle/nvim-cm-tern
+	url = git@github.com:roxma/nvim-cm-tern
