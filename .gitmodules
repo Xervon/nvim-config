@@ -133,3 +133,9 @@
 [submodule "bundle/nvim-cm-tern"]
 	path = bundle/nvim-cm-tern
 	url = git@github.com:roxma/nvim-cm-tern
+[submodule "bundle/phpactor"]
+	path = bundle/phpactor
+	url = git@github.com:phpactor/phpactor
+[submodule "bundle/ncm-phpactor"]
+	path = bundle/ncm-phpactor
+	url = git@github.com:roxma/ncm-phpactor
