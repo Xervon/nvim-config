@@ -178,15 +178,6 @@ let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 let g:UltiSnipsExpandTrigger="<C-j>"
 let g:UltiSnipsEditSplit="vertical"
-" {{{2 YouCompleteMe
-let g:ycm_min_num_of_chars_for_completion = 1
-let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_key_list_select_completion = ['<Down>', '<C-n>']
-let g:ycm_key_list_previous_completion = ['<Up>',   '<C-p>']
-let g:ycm_rust_src_path = '~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
-" {{{3 mappings
-nnoremap <Leader>ygd :YcmCompleter GoTo<CR>
 " {{{2 scratch.vim
 let g:scratch_persistence_file = '.scratch.vim'
 " {{{2 gen_tags
@@ -217,6 +208,11 @@ command! -bang -nargs=* Rg
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
+" {{{2 nvim-completion-manager
+set shortmess+=c
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<CR>" : "\<CR>")
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "}}}1
 
 " vim: fdm=marker foldlevel=0 tabstop=4:
