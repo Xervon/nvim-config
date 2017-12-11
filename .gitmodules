@@ -145,3 +145,6 @@
 [submodule "bundle/vim-racer"]
 	path = bundle/vim-racer
 	url = git@github.com:racer-rust/vim-racer
+[submodule "bundle/ncm-css"]
+	path = bundle/ncm-css
+	url = git@github.com:calebeby/ncm-css
